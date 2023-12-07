@@ -9,7 +9,7 @@ import ru.clevertec.inheritancepractice.dto.response.DeleteResponse;
 import ru.clevertec.inheritancepractice.dto.response.PaymentResponse;
 import ru.clevertec.inheritancepractice.exception.NotFoundException;
 import ru.clevertec.inheritancepractice.exception.ServiceException;
-import ru.clevertec.inheritancepractice.mapper.PaymentMapper;
+import ru.clevertec.inheritancepractice.mapper.PaymentMapperProxy;
 import ru.clevertec.inheritancepractice.model.Payment;
 import ru.clevertec.inheritancepractice.repository.PaymentRepository;
 import ru.clevertec.inheritancepractice.service.PaymentService;
@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 public class PaymentServiceImpl implements PaymentService {
 
     private final PaymentRepository paymentRepository;
-    private final PaymentMapper paymentMapper;
+    private final PaymentMapperProxy paymentMapper;
 
     @Override
     public PaymentResponse findById(Long id) {

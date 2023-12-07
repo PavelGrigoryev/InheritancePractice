@@ -1,0 +1,66 @@
+### findById
+GET http://localhost:8080/payments/1
+Accept: application/json
+
+### findAll
+GET http://localhost:8080/payments?page=0&size=5&sort=id
+Accept: application/json
+
+### save ERIP
+POST http://localhost:8080/payments
+Accept: application/json
+Content-Type: application/json
+
+{
+  "payment_from": "Corey",
+  "payment_to": "Sid",
+  "payment_type": "ERIP",
+  "field_for_insertion": "Slipknot code",
+  "value_for_insertion": "666"
+}
+
+### save Requisite
+POST http://localhost:8080/payments
+Accept: application/json
+Content-Type: application/json
+
+{
+  "payment_from": "Shown",
+  "payment_to": "Chris",
+  "payment_type": "REQUISITE",
+  "unp": "742617000027",
+  "receiver": "#3 INC.",
+  "destination": "Payment for percussion"
+}
+
+### updateById ERIP
+PUT http://localhost:8080/payments/11
+Accept: application/json
+Content-Type: application/json
+
+{
+  "payment_from": "Mick",
+  "payment_to": "James",
+  "payment_type": "ERIP",
+  "field_for_insertion": "Slipknot code",
+  "value_for_insertion": "777"
+}
+
+### updateById Requisite
+PUT http://localhost:8080/payments/12
+Accept: application/json
+Content-Type: application/json
+
+{
+  "payment_from": "Sid",
+  "payment_to": "Craig",
+  "payment_type": "REQUISITE",
+  "unp": "742617000027",
+  "receiver": "#133 LCC.",
+  "destination": "Payment for mask"
+}
+
+###deleteById
+DELETE http://localhost:8080/payments/15
+Accept: application/json
+Content-Type: application/json
